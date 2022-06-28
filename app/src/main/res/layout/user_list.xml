@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userItem"
+            type="com.raja.rv_with_databinding.data.model.Item" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thubmImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loadImage='@{userItem.owner.avatar_url}' />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text='@{userItem.name}'
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/thubmImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="HHHHHHHHHH" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/descTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text='@{userItem.description ?? "No Desc avaialable"}'
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/thubmImage"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+            tools:text="HHHHHHHHHH" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/createdDateTextView"
+            text='@{userItem.created_at}'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/thubmImage"
+            app:layout_constraintTop_toBottomOf="@+id/descTextView"
+            tools:text="HHHHHHHHHH" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
