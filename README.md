@@ -2,41 +2,40 @@
 
 ![img1](https://user-images.githubusercontent.com/107350779/182526502-c412c3a4-be4b-43d1-858d-5b04d67de978.jpg)
 
-Package Setup 
-Activity **MainActivity**
-Adapter **AdapterUser**
+Package Setup <br/>
+Activity **MainActivity**<br/>
+Adapter **AdapterUser**<br/>
 
-XML **activity_main**
-       **user_list**
+XML **activity_main**<br/>
+       **user_list**<br/>
        
-**Module Define**
-**data** - model 
--Item -
-License - 
-Owner -
-User
+**Module Define**<br/>
+**data** - model <br/>
+-Item -<br/>
+License - <br/>
+Owner -<br/>
+User<br/>
 
-**network** - RetroInstance
-            - RetroService
-**ui**
-**adapter**
-AdapterUser
+**network** <br/>
+- RetroInstance <br/>
+- RetroService <br/>
+**ui** <br/>
+**adapter** 
+AdapterUser <br/>
 
 **viewModel**
-MainActivityViewModel
+MainActivityViewModel <br/>
+MainActivity <br/>
 
-MainActivity
-
-**Project Architecture
- compileSdk 32
- applicationId "com.raja.rv_with_databinding"
- minSdk 25
- targetSdk 32
- versionCode 1
- versionName "1.0"
+**Project Architecture <br/>
+ compileSdk 32 <br/> 
+ applicationId "com.raja.rv_with_databinding" <br/>
+ minSdk 25 <br/>
+ targetSdk 32 <br/>
+ versionCode 1 <br/>
+ versionName "1.0" <br/>
  
-**Dependency**
-
+**Dependency** <br/>
  implementation 'com.squareup.retrofit2:retrofit:2.9.0'<br/>
  implementation 'com.squareup.retrofit2:converter-gson:2.9.0'<br/>
  implementation 'com.github.bumptech.glide:glide:4.12.0'<br/>
