@@ -1,5 +1,7 @@
 package com.raja.rv_with_databinding.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -22,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
 
@@ -48,6 +49,17 @@ class MainActivity : AppCompatActivity() {
         })
         viewModel.makeAPICall("newyork")
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.btnShare.setOnClickListener {
+
+            val url = "https://wa.me/8607796935"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
     }
 
 }
